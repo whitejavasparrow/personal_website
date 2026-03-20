@@ -1,0 +1,262 @@
+@import "index.css";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#resume {
+  width: 90%; /* space outside resume */
+  min-width: 375px; /* minimin width determined by timeline */
+  margin-top: 135px; /* to offset nav */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-title {
+  text-align: center;
+  background-color: #402121;
+  color: #d8d7d9;
+  line-height: 2.5rem;
+  letter-spacing: 2.5pt;
+  border-radius: 5px;
+}
+
+* {
+  /* border: 1px solid red !important; */
+  font-family: "微軟正黑體", sans-serif;
+  letter-spacing: 1.5pt;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.title-container {
+  background-color: #d9b8b8;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  display: flex;
+  justify-content: center; /* to center .name-container and .title-container */
+}
+
+.name-container {
+  text-align: right;
+  padding: 15px;
+  width: 50%;
+}
+
+.title-container h1 {
+  color: #8b5656;
+  font-size: max(24px, 2.5vw);
+}
+
+.title-container h2 {
+  color: #8b5656;
+  font-size: max(18px, 2.25vw);
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 250px;
+  border-radius: 5%;
+  padding: 15px;
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.motto-punc {
+  font-size: 65px;
+  top: -12.5px;
+  left: -15px;
+}
+
+.motto-container {
+  position: relative;
+}
+
+.motto {
+  position: absolute;
+  left: 5vw;
+  top: 2vw;
+}
+
+hr {
+  border-top: 1px solid #402121;
+  border-bottom: 1px solid #402121;
+}
+
+/* right section */
+* {
+  position: relative;
+  /* border: 1px solid red !important; */
+  font-family: "微軟正黑體", sans-serif;
+  letter-spacing: 1.5pt;
+  color: #402121;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-evenly; /* to allow left and right section to be placed in the middle when there is only one column */
+  flex-wrap: wrap;
+}
+
+/* .left-section {
+  background-color: yellow;
+}
+
+.right-section {
+  background-color: blue;
+} */
+
+.contact {
+  text-align: center;
+}
+
+.motto-punc {
+  font-size: 65px;
+}
+
+.motto-container {
+  position: relative;
+}
+
+.motto {
+  position: absolute;
+  left: 5vw;
+  top: 2vw;
+}
+
+.hobby-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.hobby-icon {
+  width: 64px;
+  height: 64px;
+  margin: 5px 25px;
+}
+
+hr {
+  border-top: 1px solid #402121;
+  border-bottom: 1px solid #402121;
+}
+
+/* timeline */
+body {
+  background: #d9b8b8;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e1e1e1 0%, #c09090 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #e1e1e1 0%, #c09090 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e1e1e1 0%, #c09090 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#bea2e7", endColorstr="#86b7e7",GradientType=0 );
+  /* IE6-9 */
+}
+
+.timeline-container {
+  margin: 50px 0; /* to have more space around timeline */
+}
+
+.timeline-container ul {
+  position: relative;
+  font-size: 13px;
+  margin-left: 25px;
+}
+.timeline-container ul:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  border-left: 2px dashed #fff; /* dashed line in-between */
+}
+.timeline-container ul li {
+  position: relative;
+  margin-left: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 14px;
+  border-radius: 6px;
+  width: 275px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+}
+.timeline-container ul li:not(:first-child) {
+  margin-top: 30px; /* dashed line between item */
+}
+.timeline-container ul li > span {
+  height: 100%;
+  width: 2px;
+  background: #fff; /* solid line before timeline */
+  left: -30px; /* to unset "margin-left: 30px */
+  top: 0;
+  position: absolute;
+}
+.timeline-container ul li > span:before,
+.timeline-container ul li > span:after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #8b5656;
+  top: 0;
+  left: -5px;
+}
+.timeline-container ul li span:after {
+  top: 100%;
+}
+.timeline-container ul li > div {
+  margin-left: 10px;
+}
+.timeline-container div .title,
+.timeline-container div .type {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.timeline-container div .info {
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.timeline-container div > div {
+  margin-top: 5px;
+}
+.timeline-container span.number {
+  height: 100%;
+}
+.timeline-container span.number span {
+  position: absolute;
+  font-size: 10px;
+  left: -65px;
+  font-weight: bold;
+}
+.timeline-container span.number span:first-child {
+  top: 100%;
+}
+.timeline-container span.number span:last-child {
+  top: 0;
+}

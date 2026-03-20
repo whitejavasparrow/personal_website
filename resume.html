@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="resume.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <title>Résumé</title>
+  </head>
+  <body>
+    <nav id="nav"></nav>
+    <script type="module" src="script/navItems.js"></script>
+
+    <div id="resume">
+      <section class="title-container">
+        <div class="profile-container">
+          <img class="profile-pic" src="./imgs/jessy_chen_2025.jpg" alt="" />
+        </div>
+        <div class="name-container">
+          <h1 class="name">陳蓓怡 (她)<br />Pei-Yi Jessy Chen (She/her)</h1>
+          <h2 class="title">前端工程師<br />Front-end web developer</h2>
+          <h2 class="title">中英筆譯譯者<br />Front-end web developer</h2>
+          <h2 class="title">國高中英文家教<br />Private tutor on Junior High and High School English</h2>
+        </div>
+      </section>
+
+      <section class="content-container">
+        <section class="left-section">
+          <section class="contact-container">
+            <p class="contact">
+              <img
+                src="./imgs/email.png"
+                class="contact-icon"
+              />peiyijessychen@gmail.com
+            </p>
+            <p class="contact">
+              <img src="./imgs/phone.png" class="contact-icon" />+886 989159629
+            </p>
+            <p class="contact">
+              <img src="./imgs/birthday.png" class="contact-icon" />1993.09.03
+            </p>
+            <p class="contact">
+              <img src="./imgs/address.png" class="contact-icon" />新北市新莊區中和街<br>Zhonghe St.,<br>Xinzhuang Dist.,<br>New Taipei City
+            </p>
+          </section>
+
+          <h3 class="container-title">教育背景 Education</h3>
+          <div class="education-container timeline-container"></div>
+          <script type="module" src="script/timeline.js"></script>
+
+          <div class="eng-test-container">
+            <h3 class="container-title">語文能力與檢定 Languages</h3>
+            <li class="lang-proficiency">英文 English C1</li>
+            <li class="lang-proficiency">荷蘭文 Dutch A2</li>
+            <hr>
+            <li class="eng-test">托福 TOEFL 108</li>
+            <li class="eng-test">雅思 IELTS 7.5</li>
+            <li class="eng-test">多益 TOEIC 955</li>
+            <li class="eng-test">全民英檢高級 GEPT Advanced</li>
+          </div>
+          <div class="skill-container">
+            <h3 class="container-title">技能 SKILLS</h3>
+            <li class="skill">HTML / CSS / JavaScript</li>
+            <li class="skill">Python / R</li>
+            <li class="skill">React</li>
+            <li class="skill">Tableau / Alteryx</li>
+            <li class="skill">Git</li>
+          </div>
+
+          <h3 class="container-title">休閒 HOBBIES</h3>
+          <div class="hobby-container"></div>
+          <script type="module" src="script/hobbies.js"></script>
+        </section>
+
+        <section class="right-section">
+          <section>
+            <div class="motto-punc">“</div>
+            <p class="motto">Learn enough to pass, and keep learning!</p>
+          </section>
+
+          <h3 class="container-title">工作經歷 Experience</h3>
+          <div class="experience-container timeline-container"></div>
+          <!-- <h3 class="container-title">課外活動經驗 Extracurricular</h3>
+          <div class="extracurricular-container timeline-container"></div> -->
+          <!-- <script type="module" src="script/timeline.js"></script> -->
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

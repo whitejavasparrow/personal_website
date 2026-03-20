@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="memories.css" />
+    <link rel="stylesheet" href="sakura.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="nav"></nav>
+    <script type="module" src="script/navItems.js"></script>
+
+    <div class="content-container">
+      <div class="video-container">
+        <div class="flowers"></div>
+        <div class="videos">
+          <video id="cat-coco" controls muted>
+            <!-- <source src="./video/cat-coco.mov" /> -->
+          </video>
+        </div>
+        <div class="flowers"></div>
+      </div>
+
+      <div class="audio-container">
+        <div class="flowers"></div>
+        <audio controls autoplay loop>
+          <source src="test.mp3" />
+          你的瀏覽器不支援 HTML5 音訊格式。
+        </audio>
+        <div class="flowers"></div>
+      </div>
+
+      <!-- <script type="module" src="script/genPara.js"></script>  -->
+      <script type="module" src="script/sakura.js"></script>
+    </div>
+  </body>
+</html>

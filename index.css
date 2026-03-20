@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap");
+
+:root {
+  --color-background: #d0c6bc;
+  --color-black: black;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+* {
+  /* border: 1px solid red !important; */
+  font-family: "Noto Sans TC", sans-serif;
+  color: var(--color-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* styling the first letter of the website title */
+.letters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circled-letter {
+  height: 50px;
+  width: 50px;
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7.5px;
+}
+
+.other-letters {
+  letter-spacing: 7.5px;
+}
+/*  */
+
+/* navbar */
+nav {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 99;
+  background-color: #976e56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12.5px;
+  opacity: 0.9;
+}
+
+nav.inverted {
+  background-color: #bfaea4;
+}
+
+.nav-item {
+  text-decoration: none;
+}
+
+.nav-item span {
+  letter-spacing: 5px;
+  color: whitesmoke;
+  margin: 15px;
+}
+
+.nav-item span:hover {
+  color: #854621;
+  transition: 0.3s;
+  padding: 2.5px;
+  border-bottom: 5px solid #854621;
+}
+/* navbar */
+
+/* banner */
+.banner {
+  margin-top: 135px;
+  background-image: url("./imgs/banner.jpeg");
+  height: 100vh;
+  width: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  width: 42%;
+  max-width: 400px;
+  min-width: 180px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.banner-overlay p {
+  padding: 36px;
+  color: #854621;
+  font-size: 18px;
+}

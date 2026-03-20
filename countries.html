@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="countries.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Countries</title>
+  </head>
+  <body>
+    <nav id="nav"></nav>
+    <script type="module" src="script/navItems.js"></script>
+
+    <div class="wrapper">
+      <ul id="countrylist"></ul>
+      <button id="btn-goodie" onclick="fetchData()">選選好米亞</button>
+    </div>
+
+    <script>
+      const domainUrl = "https://restcountries.com/v3.1/all";
+
+      let items = [];
+
+      function fetchData() {
+        $.ajax({
+          url: "https://restcountries.com/v3.1/all",
+          success: function (res) {
+            console.log(res);
+
+            updateData(res);
+          },
+          error: function () {
+            console.log("Data fetch failure");
+          },
+        });
+      }
+
+      function updateData(res) {
+        let count = 0;
+        const countryIdx = [];
+        while (count < 10) {
+          countryIdx.push(Math.round(Math.random() * 250 + 1));
+          count++;
+        }
+
+        let ItemTemplate = "";
+
+        res
+          .filter((el, idx) => countryIdx.includes(idx))
+          .forEach((el) => {
+            ItemTemplate += `
+                    <li class="country" data-id="${el.name.common}">
+                      <h3 class="country-name">${el.name.common}</h3>
+                      <img class="map-icon" src="./imgs/map.png"/></a>
+                      <div class="country-photos">
+                        <img src=${el.flags.svg} class="country-flag" />
+                        <img src=${
+                          el.coatOfArms.svg
+                        } class="country-coat-of-arms" />
+                      </div>
+                      <hr>
+
+                      <p><b>Population:</b> ${el.population}</p>
+
+                      <a href="${
+                        el.maps.googleMaps
+                      }" target="_blank" rel="noopener noreferrer"><b>Location:</b> (${el.latlng
+              .toString()
+              .split(",")
+              .join(", ")})
+
+                      <p><b>Car side</b>: ${el.car.side}</p>
+                    </li>
+                `;
+          });
+        listElement = document.querySelector("#countrylist");
+        listElement.innerHTML = ItemTemplate;
+      }
+    </script>
+  </body>
+</html>

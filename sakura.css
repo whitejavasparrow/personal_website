@@ -1,0 +1,50 @@
+@charset "UTF-8";
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #777;
+}
+
+.content-container {
+  margin-top: 225px;
+}
+
+@keyframes falling_flower {
+  0% {
+    transform: translateX(0%) translateY(-50%);
+    opacity: 0%;
+  }
+  25% {
+    transform: translateX(5%) translateY(-12%);
+    opacity: 50%;
+  }
+  50% {
+    transform: translateX(0%) translateY(12%);
+    opacity: 25%;
+  }
+  100% {
+    transform: translateX(-5%) translateY(50%);
+    opcity: 0%;
+  }
+}
+
+.flowers svg {
+  height: 2.1875rem;
+}
+
+.flowers svg .flower {
+  fill: rgba(255, 192, 203, 0.6);
+  stroke: rgba(255, 192, 203, 0.8);
+  stroke-width: 15px;
+  stroke-dasharray: 10; /* petals of flowers */
+  animation: falling_flower 10s infinite;
+}
+.flowers svg .flower2 {
+  animation-delay: -3s;
+}
+.flowers svg .flower3 {
+  animation-delay: -6s;
+}
