@@ -8,6 +8,7 @@ const navItems = [
   // { name: "Bio", path: "bio.html" },
   // { name: "Countries", path: "countries.html" },
   // { name: "Posts", path: "posts.html" },
+  { name: "Portfolio", path: "portfolio.html" },
   { name: "Memories", path: "memories.html" },
   { name: "Contact", path: "contact.html" },
 ];
